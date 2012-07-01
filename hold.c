@@ -29,9 +29,9 @@ void print_usage_exit(void)
 {
 	fprintf(stderr, "usage: %s PROGRAM-TO-HOLD-FOR-DEBUGGING [ARGS ...]\n\n"
 			"Afterwards, use:\n"
-			"(gdb) attach PID\n"
+			"gdb -p PID\n"
 			"(gdb) signal 0\n"
-			"(gdb) signal 0\n"
+			"(gdb) signal 0 # yes, signal a second time\n"
 			"to continue program execution after attaching to it in the debugger.\n",
 			program_name);
 	exit(2);
